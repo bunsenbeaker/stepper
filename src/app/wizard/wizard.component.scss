@@ -1,0 +1,7 @@
+.wizard-container {
+    width: 500px;
+    height: 500px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    border: 1px solid black;
+}

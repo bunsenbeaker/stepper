@@ -1,0 +1,9 @@
+<div class="wizfooter">
+    <button cdkStepperPrevious>PREV</button>
+
+    <button cdkStepperNext *ngIf="!customNext; else customNextButtonTemplate">NEXT</button>
+    
+    <ng-template #customNextButtonTemplate>
+        <ng-container [ngTemplateOutlet]="customNext"></ng-container>
+    </ng-template>
+</div>
