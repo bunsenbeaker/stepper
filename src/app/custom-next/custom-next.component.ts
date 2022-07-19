@@ -10,6 +10,7 @@ export class CustomNextComponent implements OnInit {
   @Input() stepInfo: any;
   @Output() canContinue:EventEmitter<void> = new EventEmitter();
 
+  public gogo() { }
   
   constructor() { }
 

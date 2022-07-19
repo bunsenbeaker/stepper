@@ -1,6 +1,6 @@
 <app-wizard #myWizard [stepInfo]="currentStepInfo">
   <cdk-step>
-    <app-custom-step (readyToGO)="canProceed($event)"></app-custom-step>
+    <app-custom-step #myCustomStep (readyToGO)="canProceed($event)"></app-custom-step>
   </cdk-step>
   <cdk-step *ngFor="let step of steps">
     <ng-container *ngComponentOutlet="step.component"></ng-container>
@@ -8,5 +8,5 @@
  
 </app-wizard>
 <ng-template #step2CustomNext>
-  <app-custom-next (canContinue)="goGoStep2()" [stepInfo]="currentStepInfo"></app-custom-next>
+  <app-custom-next (canContinue)="goGoStep2(myCustomStep.isHttpSuccess)" [stepInfo]="currentStepInfo"></app-custom-next>
 </ng-template>
