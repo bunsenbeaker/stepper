@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-custom-next',
@@ -7,7 +7,9 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class CustomNextComponent implements OnInit {
 
+  @Input() stepInfo: any;
   @Output() canContinue:EventEmitter<void> = new EventEmitter();
+
   
   constructor() { }
 

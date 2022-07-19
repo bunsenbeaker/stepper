@@ -1,5 +1,5 @@
 <div class="wizard-container">
     <app-wizard-header [currentStep]="selectedIndex+1" [totalSteps]="steps.length"></app-wizard-header>
-    <div [ngTemplateOutlet]="selected ? selected.content : null"></div>
-    <app-wizard-footer [customNext]="stepInfo?.customNext"></app-wizard-footer>
+    <div [ngTemplateOutlet]="selected ? selected.content : null" [ngTemplateOutletContext]="stepInfo"></div>
+    <app-wizard-footer [disabled]="!canProceed" [customNext]="stepInfo?.customNext"></app-wizard-footer>
 </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-step1',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./step1.component.scss']
 })
 export class Step1Component implements OnInit {
+
+  @Output() proceed: EventEmitter<boolean>=new EventEmitter();
 
   constructor() { }
 

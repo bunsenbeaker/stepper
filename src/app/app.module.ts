@@ -11,6 +11,7 @@ import { Step2Component } from './step2/step2.component';
 import { Step3Component } from './step3/step3.component';
 import { CdkStepperModule } from '@angular/cdk/stepper';
 import { CustomNextComponent } from './custom-next/custom-next.component';
+import { CustomStepComponent } from './custom-step/custom-step.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CustomNextComponent } from './custom-next/custom-next.component';
     Step1Component,
     Step2Component,
     Step3Component,
-    CustomNextComponent
+    CustomNextComponent,
+    CustomStepComponent
   ],
   imports: [
     BrowserModule,

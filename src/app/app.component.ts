@@ -39,8 +39,17 @@ export class AppComponent implements AfterViewInit {
     this.steps[1].customNext=this.step2next;
     this.wiz?.selectionChange.subscribe((evt:StepperSelectionEvent) => {
       this.currentStepInfo = this.steps[evt.selectedIndex];
+      if (evt.selectedIndex===0) {
+        this.wiz.canProceed = false;
+      }
     });
   }
+
+  
+  
+canProceed(val:boolean):void {
+  this.wiz.canProceed = val;
+}
 
   
   goGoStep2():void {

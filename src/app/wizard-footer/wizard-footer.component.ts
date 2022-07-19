@@ -8,6 +8,7 @@ import { Component, Input, OnChanges, OnInit, SimpleChanges, TemplateRef } from 
 export class WizardFooterComponent implements OnInit {
 
   @Input() customNext!: TemplateRef<any>;
+  @Input() disabled = false;
 
   constructor() { }
   

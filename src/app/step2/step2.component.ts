@@ -12,4 +12,8 @@ export class Step2Component implements OnInit {
   ngOnInit(): void {
   }
 
+  step2Clicked():void {
+    
+  }
+
 }

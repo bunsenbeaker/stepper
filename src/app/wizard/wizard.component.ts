@@ -10,9 +10,9 @@ import { CdkStepper} from '@angular/cdk/stepper'
     }
   ]
 })
-export class WizardComponent extends CdkStepper implements OnInit, AfterContentInit {
-  
+export class WizardComponent extends CdkStepper implements OnInit, AfterContentInit {  
 
+  @Input() canProceed = false;
   @Input() stepInfo: any;
 
   ngOnInit(): void {
